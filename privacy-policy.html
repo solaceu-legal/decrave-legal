@@ -3,61 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — SlipEasy</title>
+<title>Privacy Policy — Decrave</title>
 <style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-    background: #fff;
-  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; line-height: 1.6; color: #1a1a1a; }
   h1 { font-size: 28px; margin-bottom: 4px; }
-  .updated { color: #777; font-size: 14px; margin-bottom: 40px; }
-  h2 { font-size: 19px; margin-top: 36px; margin-bottom: 8px; }
-  p, li { font-size: 16px; color: #333; }
+  .updated { color: #666; font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 20px; margin-top: 40px; }
+  a { color: #0a7d5f; }
   ul { padding-left: 20px; }
-  a { color: #FF6B5B; }
-  .placeholder { background: #FFF4E5; padding: 2px 6px; border-radius: 4px; }
 </style>
 </head>
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: August 2026</p>
+<p class="updated">Last updated: September 9, 2026</p>
 
-<h2>Overview</h2>
-<p>SlipEasy ("the app," "we," "us") is a quit-smoking support app for iOS, currently available through Apple's TestFlight beta testing program. This policy explains what information the app collects, how it's used, and how it's stored.</p>
+<p>Decrave ("the app," "we," "us") is a wellness tool that helps people beat nicotine cravings without waiting for a formal quit date. This policy explains what data the app collects, why, and what choices you have.</p>
 
-<h2>Information We Collect</h2>
+<h2>1. What we collect</h2>
+<p>Decrave is built to keep as much as possible on your device:</p>
 <ul>
-  <li><strong>Craving log entries</strong> you record in the app — when it happened, what triggered it, how intense it felt, and whether you smoked.</li>
-  <li><strong>Your onboarding answers</strong> — your current quitting status and roughly how many cigarettes you smoke per day.</li>
-  <li><strong>Anonymous usage data</strong> — which screens you open and basic app-usage counts, collected through a privacy-focused analytics service (TelemetryDeck). This data cannot be tied back to your identity.</li>
+  <li><strong>Craving logs</strong> — timestamp, outcome (beaten or smoked), trigger, intensity. Stored locally on your device via Apple's SwiftData framework.</li>
+  <li><strong>Reduction plan</strong> — your daily cigarette target and quit date, if you choose to set one.</li>
+  <li><strong>Settings</strong> — things like your price-per-pack estimate and notification preference, stored locally via iOS's standard app-storage mechanism.</li>
+  <li><strong>Anonymous product analytics</strong> — via TelemetryDeck, which does not collect personal identifiers, IP addresses, or advertising identifiers. We use it only to understand which features are used, not who is using them.</li>
+</ul>
+<p>Features like Trigger Radar, Milestones, and the Insights charts (craving intensity, top triggers, money trajectory, peak hours) don't collect anything new — they're calculated entirely on your device from the craving logs above, and that calculation never leaves your phone.</p>
+
+<h2>2. iCloud sync</h2>
+<p>If you're signed into iCloud, Decrave can sync your craving logs and reduction plan across your own devices using Apple's CloudKit private database. This data is stored in the private portion of your personal iCloud account — we do not have access to it, and it is never shared with other users or with us. If you're not signed into iCloud, the app works entirely offline with no loss of functionality.</p>
+
+<h2>3. What we don't do</h2>
+<ul>
+  <li>We don't use advertising SDKs or ad-tracking identifiers.</li>
+  <li>We don't sell or share your data with third parties for marketing purposes.</li>
+  <li>We don't read your messages, contacts, location, or any other on-device data outside what you explicitly log in the app.</li>
+  <li>We don't require an account or login — there's nothing tied to your identity on our servers, because we don't operate servers that store your personal logs.</li>
 </ul>
 
-<h2>What We Don't Collect</h2>
-<p>We do not collect your name, email address, phone number, precise location, contacts, photos, or advertising identifiers. SlipEasy does not show ads and does not sell or share your data with advertisers.</p>
+<h2>4. Subscriptions</h2>
+<p>Decrave Pro subscriptions are handled entirely through Apple's App Store (StoreKit). We never see or store your payment details — that's handled by Apple under its own privacy policy. You can manage or cancel your subscription anytime in your device's Settings app.</p>
 
-<h2>How Your Data Is Stored</h2>
-<p>In this beta version, everything you log is stored locally, only on your device. If a future version adds sync, it will be through your own personal iCloud account (Apple's CloudKit) — we would not be able to see or access that data ourselves. If you delete the app, your locally stored data is deleted along with it.</p>
+<h2>5. Notifications</h2>
+<p>If you turn on the optional daily reminder, it's scheduled locally on your device. We don't use a push notification server, so we never see when or whether you received it.</p>
 
-<h2>Third-Party Services</h2>
-<p>We use <a href="https://telemetrydeck.com" target="_blank">TelemetryDeck</a> for anonymous usage analytics — see <a href="https://telemetrydeck.com/privacy" target="_blank">TelemetryDeck's privacy policy</a>. We also use Apple's App Store and TestFlight infrastructure, governed by <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's own privacy policy</a>.</p>
+<h2>6. Your choices</h2>
+<ul>
+  <li><strong>Export</strong> — Decrave Pro lets you export everything you've logged as a CSV file at any time, for a date range you choose.</li>
+  <li><strong>Delete</strong> — uninstalling the app removes all locally stored data. If iCloud sync was on, you can also delete the app's data from your iCloud account via Settings → [Your Name] → iCloud → Manage Account Storage on your iPhone.</li>
+</ul>
 
-<h2>Your Choices</h2>
-<p>Because we don't collect information that identifies you, there's generally nothing tied to your identity for us to provide, correct, or delete on request. If you have questions about your data or this policy, contact us using the email below.</p>
+<h2>7. Children's privacy</h2>
+<p>Decrave is not directed at children and we do not knowingly collect data from anyone under 13 (or the relevant minimum age in your country).</p>
 
-<h2>Children</h2>
-<p>SlipEasy is not directed at children, and we do not knowingly collect information from children under 13.</p>
+<h2>8. Changes to this policy</h2>
+<p>If this policy changes in a way that affects how your data is handled, we'll update the "Last updated" date above and, where required, notify you in the app.</p>
 
-<h2>Changes to This Policy</h2>
-<p>We may update this policy as the app develops, especially as we move from beta testing toward a full release. We'll update the "last updated" date above whenever we do.</p>
+<h2>9. Contact</h2>
+<p>Questions about this policy: <a href="mailto:support@decrave.net">support@decrave.net</a></p>
 
-<h2>Contact</h2>
-<p>Questions? Email us at <span class="placeholder">kingxhang3366@gmail.com</span>.</p>
+<p style="margin-top:48px;color:#999;font-size:13px;">Decrave is a wellness tool, not a medical device, and is not a substitute for professional medical advice.</p>
 
 </body>
 </html>
